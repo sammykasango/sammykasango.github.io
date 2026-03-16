@@ -265,7 +265,7 @@ img { max-width: 100%; display: block; }
 
 /* ═══════════════════════════════════════════════════════
    H1 NAME — Long-name fluid layout
-   "DevSam / my / Mwendwa" — 3 intentional typographic lines
+   "DevSam / my / Kasango" — 3 intentional typographic lines
    Font sizes use min() so each word SELF-LIMITS to its container.
    NO breakpoint overrides needed for font-size — it's all fluid.
 ═══════════════════════════════════════════════════════ */
@@ -1342,14 +1342,7 @@ footer { background: var(--ink); padding: 28px 6vw; position: relative; z-index:
     height: auto;
   }
 
-  /*
-    Mobile: column is ~90vw.
-    Recalibrate word sizes so the longest word (Mwendwa=7 chars)
-    fits in 90vw without wrapping.
-    Each char needs ~90vw/7 ≈ 12.8vw — so word font ≈ 12vw.
-    "DevSam" (6 chars) at 12vw = 72vw → fits fine.
-    "my" (2 chars) smaller accent → 10vw.
-  */
+
   .word-first { font-size: min(13vw, 3.8rem); }
   .word-accent { font-size: min(10.5vw, 3rem); }
   .word-last  { font-size: min(11.5vw, 3.5rem); }
@@ -1396,9 +1389,6 @@ footer { background: var(--ink); padding: 28px 6vw; position: relative; z-index:
 @media (max-width: 420px) {
   #hero { padding: 84px 5vw 52px; gap: 24px; }
 
-  /* At 420px, 90vw column ≈ 378px.
-     Mwendwa (7 chars) at 11.5vw = ~48px/char → word ≈ 336px → fits.
-     Slightly smaller for comfort. */
   .word-first  { font-size: min(12vw, 3.2rem); }
   .word-accent { font-size: min(9.5vw, 2.6rem); }
   .word-last   { font-size: min(10.5vw, 3rem); }
@@ -1418,8 +1408,7 @@ footer { background: var(--ink); padding: 28px 6vw; position: relative; z-index:
 @media (max-width: 360px) {
   #hero { padding: 78px 4vw 48px; gap: 20px; }
 
-  /* 360px × 90% padding ≈ 324px column.
-     Mwendwa 7 chars → each char ~46px → 10.5vw per char → word ~73.5vw → fits. */
+
   .word-first  { font-size: min(11vw, 2.8rem); }
   .word-accent { font-size: min(8.5vw, 2.2rem); }
   .word-last   { font-size: min(9.5vw, 2.6rem); }
