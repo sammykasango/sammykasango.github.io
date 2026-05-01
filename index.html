@@ -1,383 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sammy Kasango | System Software & Network Engineer</title>
-    <meta name="google-site-verification" content="s3f8EJHlGsFknMRQ-HnBimTBTTXqgnNfALEQojOh3XY" />
-    <meta name="description" content="Sammy M. Kasango is a proffesssional Software and Network Engineer in Nairobi, Kenya, Specializing in building high-quality, scalable Software and Network Solutions." />
-    <meta name="keywords" content="Sammy Kasango, Sammy Mwendwa, Software Enginner, Network Engineer, Computer Networking, Software Engineer Portfolio, Full-Stack Developer, Web Developer, Nairobi Software Enginner, Kenya Software Enginner, Custom Software Development, Scalable Web Applications." />
-    <meta name="author" content="Engineer Sammy M. Kasango Kenya" />
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sammy Kasango — Digital Infrastructure Engineer</title>
+  <meta name="description" content="Software & Network Engineer powering digital growth through scalable systems, secure networks, and marketing-driven platforms." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Instrument+Sans:wght@300;400;500;600&family=Courier+Prime:ital@0;1&display=swap" rel="stylesheet"/>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
 </head>
 <body>
 
-  <canvas id="particle-canvas" aria-hidden="true"></canvas>
-  <div class="cursor" id="cursor" aria-hidden="true"></div>
-  <div class="cursor-follower" id="cursor-follower" aria-hidden="true"></div>
-  <div class="cursor-label" id="cursor-label" aria-hidden="true"></div>
-
-  <!-- NAV -->
-  <nav id="navbar" role="navigation" aria-label="Main navigation">
-    <div class="nav-logo" aria-label="DevSam MKa">SK<span>.</span></div>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <a href="#contact" class="nav-cta">
-      <span>Quick Connect</span>
-      <span class="cta-dot" aria-hidden="true"></span>
-    </a>
-  </nav>
-
-  <!-- HERO -->
-  <header id="hero">
-    <div class="hero-bg-text" aria-hidden="true" id="hero-bg-text"></div>
-
-    <div class="hero-left" id="hero-left">
-      <div class="hero-eyebrow">
-        <span class="dot" aria-hidden="true"></span>
-        <span class="eyebrow-text">Available for work</span>
-        <span class="eyebrow-sep" aria-hidden="true">·</span>
-        <span>2026</span>
-      </div>
-
-      <h1 class="h1-name" aria-label="Sammy Kasango">
-
-  <!-- Line 1: First name — bold ink with amber dot connector -->
-  <span class="h1-word word-first" aria-hidden="true">
-    <span class="letter">S</span><span class="letter">a</span><span class="letter">m</span><span class="letter">m</span><span class="letter">y</span><span class="dot-connector"></span>
-  </span>
-
-  <!-- Line 2: Last name — forest italic -->
-  <span class="h1-word word-last" aria-hidden="true">
-    <em><span class="letter">K</span><span class="letter">a</span><span class="letter">s</span><span class="letter">a</span><span class="letter">n</span><span class="letter">g</span><span class="letter">o</span></em>
-  </span>
-
-</h1>
-
-<!-- Title with hover-to-reveal -->
-<div class="title-block">
-  <span class="title-text" id="title-text">SYSTEM SOFTWARE &amp; NETWORK ENGINEER</span>
-</div>
-<br>
-         <div class="tag-fader-container">
-         <span class="tag-item active">System Software Engineer</span>
-         <span class="tag-item">Network Architect</span>
-      </div>
-
-      </h1>
-
-      <!-- Typewriter role line -->
-      <div class="hero-role-line">
-        <span class="role-prefix">I build</span>
-        <span class="role-typed" id="role-typed" aria-live="polite"></span>
-        <span class="role-cursor" aria-hidden="true">|</span>
-      </div>
-
-      <!-- Ticker -->
-      <div class="hero-descriptor" role="marquee" aria-label="Full-Stack Engineer · UI Craftsman · Open Source Builder">
-        <div class="descriptor-track" aria-hidden="true">
-          <span>Full-Stack Engineer</span><span class="sep">·</span>
-          <span>UI Craftsman</span><span class="sep">·</span>
-          <span>Open Source Builder</span><span class="sep">·</span>
-          <span>Full-Stack Engineer</span><span class="sep">·</span>
-          <span>UI Craftsman</span><span class="sep">·</span>
-          <span>Open Source Builder</span><span class="sep">·</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="hero-right" id="hero-right">
-      <p class="hero-bio">Designing and building reliable software and network systems that solve real-world problems. 
-        Over 3 years of experience transforming complex technical challenges into efficient, practical solutions.</p>
-
-      <!-- Featured project strip -->
-      <a href="#project-smelldetector" class="hero-featured" tabindex="0">
-        <div class="hf-label">★ Featured Project</div>
-        <div class="hf-content">
-          <div class="hf-project">
-            <span class="hf-name">C++ Code Smell Detector</span>
-            <span class="hf-metric">Static Analysis · Quality resolution time ↓ 40%</span>
-          </div>
-          <span class="hf-arrow" aria-hidden="true">↗</span>
-        </div>
-        <div class="hf-shimmer" aria-hidden="true"></div>
+  <!-- ════════ NAVBAR ═══ -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">[</span>SK<span class="logo-bracket">]</span>
       </a>
-
-      <a href="#projects" class="btn-primary" id="btn-cta">
-        <span>See My Work</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        <span class="btn-ripple" aria-hidden="true"></span>
-      </a>
-
-      <!-- Count-up stats -->
-      <div class="hero-stats" role="list">
-        <div class="hstat" role="listitem">
-          <strong class="count-up" data-target="30" data-suffix="+">0</strong>
-          <span>Projects Shipped</span>
-        </div>
-        <div class="hstat-div" aria-hidden="true"></div>
-        <div class="hstat" role="listitem">
-          <strong class="count-up" data-target="3" data-suffix="+">0</strong>
-          <span>Years Exp.</span>
-        </div>
-        <div class="hstat-div" aria-hidden="true"></div>
-        <div class="hstat" role="listitem">
-          <strong>OSS</strong>
-          <span>Active Contributor</span>
-        </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#pillars" class="nav-link">Expertise</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <span class="theme-icon">◐</span>
+        </button>
+        <a href="#contact" class="nav-cta">Hire Me</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-    </div>
-
-    <div class="hero-scroll" aria-hidden="true">
-      <div class="scroll-line"></div>
-      <span>Scroll</span>
-    </div>
-
-    <!-- Rotating badge -->
-    <div class="hero-badge" aria-hidden="true" id="hero-badge">
-      <svg viewBox="0 0 100 100" class="badge-ring" width="110" height="110">
-        <path id="badge-text-path" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0"/>
-        <text font-size="10.5" fill="currentColor" letter-spacing="3.5" font-family="Courier Prime">
-          <textPath href="#badge-text-path">· OPEN SOURCE·FULL-STACK ENGINEER· </textPath>
-        </text>
-      </svg>
-      <span class="badge-center">✦</span>
     </div>
   </header>
 
-  <!-- ABOUT -->
-  <section id="about" aria-labelledby="about-heading">
-    <div class="about-grid">
-      <div class="about-left reveal">
-        <div class="section-num" aria-hidden="true"></div>
-        <div class="avatar-box tilt-card" id="avatar-box">
-          <div class="tilt-inner">
-            <div class="avatar-glow" aria-hidden="true"></div>
-            <div class="avatar-initials" aria-label="Alex Chen">SK</div>
-            <div class="avatar-tag">Nairobi, Kenya</div>
-            <div class="avatar-status">
-              <span class="status-dot" aria-hidden="true"></span>
-              Open to opportunities
+  <!-- ══════ HERO ═══ -->
+<section class="hero" id="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+
+  <div class="hero-inner">
+
+    <div class="hero-grid">
+
+      <!-- LEFT SIDE -->
+      <div class="hero-left fade-up">
+        
+        <div class="hero-left-top">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Available for opportunities
+          </div>
+
+          <div class="hero-photo-wrap">
+            <div class="hero-photo-ring"></div>
+            <div class="hero-photo-inner">
+              <img src="images/profile.jpg" alt="Sammy Kasango profile photo" />
+            </div>
+
+            <div class="hero-photo-status">
+              <span class="status-dot"></span>
+              <span>Nairobi, Kenya</span>
             </div>
           </div>
         </div>
-        <div class="about-decoration" aria-hidden="true">
-          <span>System Architect</span>
-          <div class="deco-line"></div>
-          <span>Full Stack</span>
-        </div>
+
+        <h1 class="hero-name">
+           Sammy <em>Kasango</em>
+        </h1>
+
+        <p class="hero-headline">
+          <span class="typing-wrap">
+            <span id="typingText"></span>
+            <span class="typing-cursor">|</span>
+          </span>
+        </p>
+
       </div>
 
-      <div class="about-right reveal reveal-delay-1">
-        <h2 class="section-title" id="about-heading">Where systems<br/><em>meet interfaces</em></h2>
-        <p>I am a <strong>System Software and Network Engineer </strong>focused on designing, building, and maintaining reliable computing and network systems. 
-          My work spans system-level software, backend services, and network infrastructure, ensuring that applications and services run efficiently and securely.
-        <p>I value clear thinking, structured problem-solving, and collaborative engineering. I enjoy working with teams to design practical solutions, reviewing code to maintain quality, and continuously improving systems that organizations rely on every day.</p>
+      <!-- RIGHT SIDE -->
+<div class="hero-right fade-up delay-2">
 
-        <p class="chips-label">Skills in action — click to see where I used it:</p>
-        <div class="about-chips" role="list">
-          <a href="#project-devtrack"  class="chip" role="listitem" title="DevTrack">React</a>
-          <a href="#project-devtrack"  class="chip" role="listitem" title="DevTrack">TypeScript</a>
-          <a href="#project-pulseapi"  class="chip" role="listitem" title="PulseAPI">Node.js</a>
-          <a href="#project-pulseapi"  class="chip" role="listitem" title="PulseAPI">Python</a>
-          <a href="#project-shopwave"  class="chip" role="listitem" title="Shopwave">AWS</a>
-          <a href="#project-devtrack"  class="chip" role="listitem" title="DevTrack">PostgreSQL</a>
-          <a href="#project-flowci"    class="chip" role="listitem" title="FlowCI">Docker</a>
-          <a href="#project-flowci"    class="chip" role="listitem" title="FlowCI">Kubernetes</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="hero-right-inner">
 
-  <!-- SKILLS -->
-  <section id="skills" aria-labelledby="skills-heading">
-    <div class="section-header reveal">
-      <div class="section-num" aria-hidden="true">02</div>
-      <h2 class="section-title" id="skills-heading">Depth across<br/><em>the full stack</em></h2>
-    </div>
-    <div class="skills-grid">
+    <h2 class="hero-right-title">
+      Architecting High-performance systems, secure networks, and growth-focused digital strategy.
+    </h2>
 
-      <div class="skill-card tilt-card reveal">
-        <div class="tilt-inner">
-          <div class="skill-card-header">
-            <div class="skill-icon-wrap icon-fe" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-            </div>
-            <h3>Frontend</h3>
-          </div>
-          <ul class="skill-items" aria-label="Frontend skills">
-            <li><span class="skill-dot" aria-hidden="true"></span>React & Next.js<span class="skill-level">Expert</span></li>
-            <li><span class="skill-dot" aria-hidden="true"></span>TypeScript<span class="skill-level">Expert</span></li>
-            <li><span class="skill-dot" aria-hidden="true"></span>CSS / Tailwind<span class="skill-level">Expert</span></li>
-            <li><span class="skill-dot" aria-hidden="true"></span>Vue.js<span class="skill-level">Advanced</span></li>
-          </ul>
-          <div class="skill-bar-wrap" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Frontend 95%">
-            <div class="skill-bar" style="--w:95%"><span class="skill-bar-shimmer" aria-hidden="true"></span></div>
-          </div>
-          <a href="#project-devtrack" class="skill-project-link">See it in DevTrack →</a>
-        </div>
-      </div>
+    <p class="hero-sub">
+      I build high-performance digital infrastructure that help businesses scale,
+      automate, and thrive in the modern competitive digital economy.
+    </p>
 
-      <div class="skill-card tilt-card reveal reveal-delay-1">
-        <div class="tilt-inner">
-          <div class="skill-card-header">
-            <div class="skill-icon-wrap icon-be" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-            </div>
-            <h3>Backend</h3>
-          </div>
-          <ul class="skill-items" aria-label="Backend skills">
-            <li><span class="skill-dot" aria-hidden="true"></span>Node.js / Express<span class="skill-level">Expert</span></li>
-            <li><span class="skill-dot" aria-hidden="true"></span>Python / FastAPI<span class="skill-level">Expert</span></li>
-            <li><span class="skill-dot" aria-hidden="true"></span>PostgreSQL<span class="skill-level">Advanced</span></li>
-            <li><span class="skill-dot" aria-hidden="true"></span>GraphQL<span class="skill-level">Advanced</span></li>
-          </ul>
-          <div class="skill-bar-wrap" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="Backend 88%">
-            <div class="skill-bar" style="--w:88%"><span class="skill-bar-shimmer" aria-hidden="true"></span></div>
-          </div>
-          <a href="#project-pulseapi" class="skill-project-link">See it in PulseAPI →</a>
-        </div>
-      </div>
-
-      <div class="skill-card tilt-card reveal reveal-delay-2">
-        <div class="tilt-inner">
-          <div class="skill-card-header">
-            <div class="skill-icon-wrap icon-cloud" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg>
-            </div>
-            <h3>Cloud & DevOps</h3>
-          </div>
-          <ul class="skill-items" aria-label="Cloud and DevOps skills">
-            <li><span class="skill-dot" aria-hidden="true"></span>AWS / GCP<span class="skill-level">Advanced</span></li>
-            <li><span class="skill-dot" aria-hidden="true"></span>Docker / K8s<span class="skill-level">Advanced</span></li>
-            <li><span class="skill-dot" aria-hidden="true"></span>CI/CD Pipelines<span class="skill-level">Expert</span></li>
-            <li><span class="skill-dot" aria-hidden="true"></span>Terraform<span class="skill-level">Intermediate</span></li>
-          </ul>
-          <div class="skill-bar-wrap" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" aria-label="Cloud 82%">
-            <div class="skill-bar" style="--w:82%"><span class="skill-bar-shimmer" aria-hidden="true"></span></div>
-          </div>
-          <a href="#project-flowci" class="skill-project-link">See it in FlowCI →</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects" aria-labelledby="projects-heading">
-    <div class="section-header reveal">
-      <div class="section-num" aria-hidden="true">03</div>
-      <h2 class="section-title" id="projects-heading">Work that<br/><em>ships & scales</em></h2>
-    </div>
-    <div class="projects-list">
-
-      <article class="project-item reveal" id="project-smelldetector" data-num="01" tabindex="0">
-        <div class="project-meta">
-          <span class="project-year">2026</span>
-          <span class="project-cat">Dev · Tools</span>
-        </div>
-        <div class="project-main">
-          <div class="project-thumb p1" aria-hidden="true"><span>CS</span></div>
-          <div class="project-info">
-        <h3>Code Smell Detector <span class="arrow-badge" aria-hidden="true">↗</span></h3>
-        <p>Modular <strong>C++17 static analysis tool</strong> with 7 independent detectors — God Class, Dead Code, Deep Nesting, Magic Numbers, Duplicate Code, Long Function, and Long Parameter List. Zero dependencies, <strong>84 tests passing</strong>, three output formats (Console, JSON, HTML) and a configurable <code>.smellrc</code> threshold system.</p>
-        <div class="project-tags"><span>C++17</span><span>Static Analysis</span><span>AST</span><span>Visitor Pattern</span><span>CMake</span></div>
-        </div>
-        </div>
-        <div class="project-links">
-          <a href="https://sammykasango.github.io/code-smell-detector" class="plink plink-live" target="_blank">Live Demo ↗</a>
-          <a href="https://github.com/sammykasango/code-smell-detector" class="plink plink-code" target="_blank">Source Code →</a>
-        </div>
-      </article>
-
-
-      <article class="project-item reveal" id="project-devtrack" data-num="01" tabindex="0">
-        <div class="project-meta">
-          <span class="project-year">2025</span>
-          <span class="project-cat">SaaS · Web App</span>
-        </div>
-        <div class="project-main">
-          <div class="project-thumb p1" aria-hidden="true"><span>DT</span></div>
-          <div class="project-info">
-            <h3>DevTrack <span class="arrow-badge" aria-hidden="true">↗</span></h3>
-            <p>Reduced mean issue-resolution time by <strong>40%</strong> for 500+ engineering teams. Real-time collaborative boards with live presence, conflict-free editing, and zero-config GitHub sync — eliminating context-switching that cost hours per sprint.</p>
-            <div class="project-tags"><span>React</span><span>TypeScript</span><span>Node.js</span><span>PostgreSQL</span><span>WebSockets</span></div>
-          </div>
-        </div>
-        <div class="project-links">
-          <a href="https://devtrack.netlify.app/" class="plink plink-live" target="_blank">Live Demo ↗</a>
-          <a href="https://github.com/sammykasango" class="plink plink-code" target="_blank">Source Code →</a>
-        </div>
-      </article>
-
-      <article class="project-item reveal reveal-delay-1" id="project-pulseapi" data-num="02" tabindex="0">
-        <div class="project-meta">
-          <span class="project-year">2025</span>
-          <span class="project-cat">Dev Tools · API</span>
-        </div>
-        <div class="project-main">
-          <div class="project-thumb p2" aria-hidden="true"><span>PA</span></div>
-          <div class="project-info">
-            <h3>PulseAPI <span class="arrow-badge" aria-hidden="true">↗</span></h3>
-            <p>API gateway sustaining <strong>50k+ req/min at 99.9% uptime</strong> under Black Friday-scale spikes. Intelligent rate limiting and adaptive caching eliminated cascading failures that previously caused <strong>$20k+/hour</strong> in SLA penalties.</p>
-            <div class="project-tags"><span>Python</span><span>FastAPI</span><span>Redis</span><span>Grafana</span></div>
-          </div>
-        </div>
-        <div class="project-links">
-          <a href="https://devtools.netlify.app/" class="plink plink-live" target="_blank">Live Demo ↗</a>
-          <a href="https://github.com/sammykasango" class="plink plink-code" target="_blank">Source Code →</a>
-        </div>
-      </article>
-       
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" aria-labelledby="contact-heading">
-    <div class="contact-wrap">
-      <div class="contact-left reveal">
-        <div class="section-num" aria-hidden="true">04</div>
-        <h2 class="section-title contact-title" id="contact-heading">Let's build<br/><em>something</em><br/>that matters.</h2>
-        <p>I am open to full-time roles, contract opportunities, and professional collaborations in system software and network engineering. If you would like to discuss a project, opportunity, or technical collaboration, feel free to get in touch. 
-          I welcome meaningful conversations on building reliable and efficient systems.— let's connect.</p>
-      </div>
-      <div class="contact-right reveal reveal-delay-1">
-        <a href="mailto:hellosammykasango@gmail.com" class="contact-card email-card">
-          <div class="cc-icon" aria-hidden="true">✉</div>
-          <div class="cc-text"><strong>Send an Email</strong><span class="cc-url">hellosammykasango@gmail.com</span></div>
-          <div class="cc-arrow" aria-hidden="true">→</div>
-        </a>
-        <a href="https://github.com/sammykasango" class="contact-card" target="_blank" rel="noopener noreferrer">
-          <div class="cc-icon" aria-hidden="true">⌥</div>
-          <div class="cc-text"><strong>GitHub</strong><span class="cc-url">github.com/sammykasango</span></div>
-          <div class="cc-arrow" aria-hidden="true">→</div>
-        </a>
-        <a href="https://wa.me/+254792697745" class="contact-card" target="_blank" rel="noopener noreferrer">
-          <div class="cc-icon" aria-hidden="true">W</div>
-          <div class="cc-text"><strong>WhatsApp</strong><span class="cc-url">https://wa.me/+254792697745</span></div>
-          <div class="cc-arrow" aria-hidden="true">→</div>
-        </a>
-        <a href="https://www.linkedin.com/in/sammykasango" 
-          class="contact-card" target="_blank" rel="noopener noreferrer">
-          <div class="cc-icon" aria-hidden="true">in</div>
-          <div class="cc-text"><strong>LinkedIn</strong><span class="cc-url">linkedin.com/in/sammykasango</span></div>
-          <div class="cc-arrow" aria-hidden="true">→</div>
-        </a>
-        <a href="https://www.credly.com/users/sammykasango/skills" 
-          class="contact-card" target="_blank" rel="noopener noreferrer">
-          <div class="cc-icon" aria-hidden="true">C</div>
-          <div class="cc-text"><strong>Credly Wallet</strong><span class="cc-url">www.credly.com/users/sammykasango</span></div>
-          <div class="cc-arrow" aria-hidden="true">→</div>
-        </a>
-         <a href="Assets/Sammy_M_Kasango_Resume.pdf"
-           class="contact-card resume-card"
+    <div class="hero-ctas">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="#contact" class="btn btn-outline">Quick Connect</a>
+      <a href="Assets/Sammy_M_Kasango_Resume.pdf"
+           class="btn btn-ghost"
            target="_blank"
            rel="noopener noreferrer"
            onclick="
@@ -385,380 +110,689 @@
              a.href = this.href;
              a.download = 'Sammy_M_Kasango_Resume.pdf';
              a.click();
-           ">
-          <div class="cc-icon" aria-hidden="true">↓</div>
-          <div class="cc-text"><strong>Download Resume</strong><span class="cc-url">PDF · Updated Feb 2026</span></div>
-          <div class="cc-arrow" aria-hidden="true">→</div>
+           ">Download CV
+           </a>
+          </div>
+        </div>
+      </div>
+  </div>
+
+</div>
+
+      <!-- FULL WIDTH STATS -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">3+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+
+        <div class="stat-divider"></div>
+
+        <div class="stat-item">
+          <span class="stat-num">30+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+
+        <div class="stat-divider"></div>
+
+        <div class="stat-item">
+          <span class="stat-num">99%</span>
+          <span class="stat-label">Client Satisfaction</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+  <!-- ══════ ABOUT ═══ -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-label-col fade-left">
+          <h2 class="section-title">About<br/><em>Me</em></h2>
+        </div>
+        <div class="about-content-col fade-right">
+          <p class="about-lead">
+            I bridge <strong>software engineering</strong>, <strong>network infrastructure</strong>, and <strong>digital marketing</strong> to design and build scalable, secure, and growth-oriented digital systems.
+          </p>
+          <p class="about-body">
+            My focus is not just on building technology — it's on delivering solutions that drive real business impact in today's digital economy. Based in Nairobi, Kenya, I work with startups, SMEs, and enterprises across East Africa and globally, helping them architect the infrastructure that drive their ambitions demand.
+          </p>
+          <div class="about-tags">
+            <span class="tag">SDLC Software Development</span>
+            <span class="tag">Network Engineering</span>
+            <span class="tag">Web Development</span>
+            <span class="tag">Digital Strategy</span>
+            <span class="tag">Automation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ PILLARS ═══ -->
+  <section class="pillars section" id="pillars">
+    <div class="container">
+      <div class="section-header fade-up">
+        <h2 class="section-title">Core <em>Expertise</em></h2>
+        <p class="section-sub">Three integrated disciplines. One unified digital infrastructure vision.</p>
+      </div>
+
+      <div class="pillars-grid">
+        <div class="pillar-card fade-up delay-1">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="8" width="40" height="28" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M16 24l-6 4 6 4M32 24l6 4-6 4M22 16l4 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="pillar-num">01</div>
+          <h3 class="pillar-title">Software Systems</h3>
+          <p class="pillar-desc">Engineering robust applications and automation tools that power modern business operations.</p>
+          <ul class="pillar-list">
+            <li>Web applications & portals</li>
+            <li>Automation & scripting tools</li>
+            <li>REST APIs & backend systems</li>
+            <li>Database design & optimization</li>
+          </ul>
+          <div class="pillar-accent"></div>
+        </div>
+
+        <div class="pillar-card featured fade-up delay-2">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="8" fill="none" stroke="currentColor" stroke-width="2.5"/>
+              <circle cx="24" cy="24" r="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="4 3"/>
+              <circle cx="8" cy="16" r="3" fill="currentColor"/>
+              <circle cx="40" cy="16" r="3" fill="currentColor"/>
+              <circle cx="8" cy="32" r="3" fill="currentColor"/>
+              <circle cx="40" cy="32" r="3" fill="currentColor"/>
+              <line x1="11" y1="16" x2="16" y2="20" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="37" y1="16" x2="32" y2="20" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="11" y1="32" x2="16" y2="28" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="37" y1="32" x2="32" y2="28" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="pillar-num">02</div>
+          <h3 class="pillar-title">Network Infrastructure</h3>
+          <p class="pillar-desc">Designing and securing networks that form the backbone of reliable digital operations.</p>
+          <ul class="pillar-list">
+            <li>LAN/WAN architecture & design</li>
+            <li>Network security & hardening</li>
+            <li>VLAN, DHCP & routing protocols</li>
+            <li>System monitoring & optimization</li>
+          </ul>
+          <div class="pillar-accent"></div>
+        </div>
+
+        <div class="pillar-card fade-up delay-3">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 36L18 20l8 8 8-12 8 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="36" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M34 12h4M36 10v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="pillar-num">03</div>
+          <h3 class="pillar-title">Digital Growth Systems</h3>
+          <p class="pillar-desc">Digital Marketing strategist combining tech with marketing intelligence for measurable market growth.</p>
+          <ul class="pillar-list">
+            <li>SEO-optimized platforms</li>
+            <li>Marketing funnels & automation</li>
+            <li>Analytics & performance tracking</li>
+            <li>Conversion-focused architecture</li>
+          </ul>
+          <div class="pillar-accent"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════ SKILLS ═══ -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header fade-up">
+        <h2 class="section-title">Technical <em>Skills</em></h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-group fade-up delay-1">
+          <h3 class="skill-group-title">
+            <span class="skill-group-icon">⟨/⟩</span>
+            Engineering
+          </h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>HTML / CSS</span><span class="skill-pct">90%</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>JavaScript</span><span class="skill-pct">78%</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="78"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Python</span><span class="skill-pct">80%</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>APIs & Backend</span><span class="skill-pct">72%</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="72"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>C++</span><span class="skill-pct">75%</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-group fade-up delay-2">
+          <h3 class="skill-group-title">
+            <span class="skill-group-icon">⬡</span>
+            Networking
+          </h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>TCP/IP & Protocols</span><span class="skill-pct">85%</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Cisco IOS / Packet Tracer</span><span class="skill-pct">80%</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Network Security</span><span class="skill-pct">76%</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="76"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>VLAN / VLSM / DHCP</span><span class="skill-pct">82%</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="82"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>LAN/WAN Design</span><span class="skill-pct">78%</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="78"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-group fade-up delay-3">
+          <h3 class="skill-group-title">
+            <span class="skill-group-icon">↗</span>
+            Digital Marketing
+          </h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>SEO Optimization</span><span class="skill-pct">82%</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="82"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Google Analytics</span><span class="skill-pct">75%</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Conversion Funnels</span><span class="skill-pct">70%</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="70"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Content Strategy</span><span class="skill-pct">78%</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="78"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>WordPress / CMS</span><span class="skill-pct">85%</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech Stack Chips -->
+      <div class="tech-stack fade-up delay-4">
+        <span class="tech-stack-label">Tools & Stack:</span>
+        <div class="tech-chips">
+          <span class="chip">Git & GitHub</span>
+          <span class="chip">WordPress</span>
+          <span class="chip">MySQL</span>
+          <span class="chip">VS Code</span>
+          <span class="chip">Cisco Packet Tracer</span>
+          <span class="chip">Tkinter</span>
+          <span class="chip">ReportLab</span>
+          <span class="chip">GitHub Pages</span>
+          <span class="chip">Figma</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ PROJECTS ═══ -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header fade-up">
+        <h2 class="section-title">Featured <em>Projects</em></h2>
+        <p class="section-sub">Selected work that demonstrates impact across the full digital infrastructure stack.</p>
+      </div>
+
+      <div class="project-filters fade-up delay-1">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="software">Software</button>
+        <button class="filter-btn" data-filter="network">Network</button>
+        <button class="filter-btn" data-filter="digital">Digital</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card fade-up delay-1" data-category="software">
+          <div class="project-card-top">
+            <div class="project-meta">
+              <span class="project-tag">Software</span>
+              <span class="project-year">2026</span>
+            </div>
+            <div class="project-icon-wrap">
+              <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="4" width="32" height="32" rx="6" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 20h16M12 14h10M12 26h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="project-title">C++ Code Smell Detector</h3>
+          <p class="project-problem"><strong>Problem:</strong> Manual code reviews in C++ projects miss recurring anti-patterns, slowing down team velocity.</p>
+          <p class="project-solution"><strong>Solution:</strong> A modular 35-file static analysis system with a Lexer, AST Builder, and 7 specialized detectors running 84 automated tests.</p>
+          <div class="project-impact">
+            <span class="impact-label">Impact</span>
+            Automated code quality checks — reduced review time and improved codebase maintainability across projects.
+          </div>
+          <div class="project-tech">
+            <span>C++</span><span>AST</span><span>Lexer</span><span>Unit Testing</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/sammykasango/code-smell-detector" target="_blank" class="project-link">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card featured fade-up delay-2" data-category="software">
+          <div class="project-card-top">
+            <div class="project-meta">
+              <span class="project-tag">Software</span>
+              <span class="project-year">2026</span>
+            </div>
+            <div class="project-icon-wrap">
+              <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="14" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M14 20l4 4 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="project-title">Church Union Management System</h3>
+          <p class="project-problem"><strong>Problem:</strong> Manual church member management led to duplicates, lost records, and inefficient reporting.</p>
+          <p class="project-solution"><strong>Solution:</strong> Python desktop app with Tkinter UI, ReportLab PDF generation, duplicate prevention logic, and a professional dark-theme sidebar dashboard.</p>
+          <div class="project-impact">
+            <span class="impact-label">Impact</span>
+            Centralized member records, automated PDF reporting, and eliminated data duplication for a growing church organization.
+          </div>
+          <div class="project-tech">
+            <span>Python</span><span>Tkinter</span><span>ReportLab</span><span>SQLite</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/sammykasango" target="_blank" class="project-link">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card fade-up delay-3" data-category="network">
+          <div class="project-card-top">
+            <div class="project-meta">
+              <span class="project-tag">Network</span>
+              <span class="project-year">2026</span>
+            </div>
+            <div class="project-icon-wrap">
+              <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                <rect x="14" y="4" width="12" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                <rect x="4" y="28" width="12" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                <rect x="24" y="28" width="12" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M20 12v8M20 20H10v8M20 20h10v8" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="project-title">Enterprise VLAN Network Lab</h3>
+          <p class="project-problem"><strong>Problem:</strong> University network simulation required segmented VLANs with inter-VLAN routing and dynamic IP allocation.</p>
+          <p class="project-solution"><strong>Solution:</strong> Full Cisco Packet Tracer topology with VLAN configuration, VLSM addressing, Router-on-a-Stick, and DHCP across multiple departments.</p>
+          <div class="project-impact">
+            <span class="impact-label">Impact</span>
+            Demonstrated production-grade network segmentation and routing skills ensuring secure Enterprise VLAN deliverable.
+          </div>
+          <div class="project-tech">
+            <span>Cisco IOS</span><span>VLAN</span><span>VLSM</span><span>DHCP</span><span>RoaS</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/sammykasango" target="_blank" class="project-link">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card fade-up delay-4" data-category="digital">
+          <div class="project-card-top">
+            <div class="project-meta">
+              <span class="project-tag">Digital</span>
+              <span class="project-year">2026</span>
+            </div>
+            <div class="project-icon-wrap">
+              <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="6" width="32" height="24" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M4 14h32M10 10h2M15 10h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M12 22l4-4 4 4 4-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="12" y="30" width="16" height="4" rx="1" fill="none" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="project-title">VendaSoftNet™ Brand System</h3>
+          <p class="project-problem"><strong>Problem:</strong> A tech company needed a complete, cohesive digital identity that communicated authority and innovation.</p>
+          <p class="project-solution"><strong>Solution:</strong> Full brand architecture including a 5-color palette, hexagonal V-node logo, HTML brand identity system, GitHub Pages portfolio, and unified @sammykasango handle across all platforms.</p>
+          <div class="project-impact">
+            <span class="impact-label">Impact</span>
+            Established a recognized digital presence across GitHub, LinkedIn, Facebook, and YouTube with consistent brand authority.
+          </div>
+          <div class="project-tech">
+            <span>HTML/CSS</span><span>GitHub Pages</span><span>Brand Strategy</span><span>SEO</span>
+          </div>
+          <div class="project-links">
+            <a href="https://sammykasango.github.io" target="_blank" class="project-link">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Live Site
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════ CASE STUDY ═══ -->
+  <section class="case-study section" id="case-studies">
+    <div class="container">
+      <div class="section-header fade-up">
+        <h2 class="section-title">Case <em>Study</em></h2>
+        <p class="section-sub">A deep-dive into a real-world engineering challenge and how it was solved.</p>
+      </div>
+
+      <div class="case-card fade-up delay-1">
+        <div class="case-label">Featured Case Study</div>
+        <h3 class="case-title">WiFi Billing & Hotspot Management Platform</h3>
+        <div class="case-grid">
+          <div class="case-section">
+            <h4 class="case-section-title">
+              <span class="case-section-num">01</span> The Problem
+            </h4>
+            <p>A small ISP provider in Nairobi was managing hotspot billing manually — tracking active sessions in spreadsheets, issuing vouchers by hand, and reconciling payments without any automation. Revenue was leaking, customer experience was poor, and the process was completely unscalable.</p>
+          </div>
+          <div class="case-section">
+            <h4 class="case-section-title">
+              <span class="case-section-num">02</span> The Approach
+            </h4>
+            <p>I designed and deployed a self-contained billing system integrated with MikroTik RouterOS. The architecture separated the network authentication layer (RADIUS) from the billing frontend, allowing clean session management, real-time monitoring, and automated voucher generation.</p>
+          </div>
+          <div class="case-section">
+            <h4 class="case-section-title">
+              <span class="case-section-num">03</span> Architecture
+            </h4>
+            <p>The system included: a Python-based admin panel, MikroTik API integration for session control, a MySQL backend for user and transaction records, and a simple customer-facing captive portal. Deployed on a local server with remote management capability.</p>
+          </div>
+          <div class="case-section highlight">
+            <h4 class="case-section-title">
+              <span class="case-section-num">04</span> Results
+            </h4>
+            <div class="case-results">
+              <div class="case-result-item">
+                <span class="case-result-num">100%</span>
+                <span class="case-result-label">Billing Automated</span>
+              </div>
+              <div class="case-result-item">
+                <span class="case-result-num">60%</span>
+                <span class="case-result-label">Admin Time Saved</span>
+              </div>
+              <div class="case-result-item">
+                <span class="case-result-num">0</span>
+                <span class="case-result-label">Revenue Leakage</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="case-tech">
+          <span>Python</span><span>MikroTik API</span><span>MySQL</span><span>RADIUS</span><span>HTML/CSS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ SERVICES ═══ -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header fade-up">
+        <h2 class="section-title">What I <em>Build</em></h2>
+        <p class="section-sub">End-to-end digital infrastructure services — from concept to deployment.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card fade-up delay-1">
+          <div class="service-icon">
+            <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="32" height="22" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M2 10h32M10 6h2M15 6h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <rect x="10" y="24" width="16" height="10" rx="1" fill="none" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Website & Web App Development</h3>
+          <p class="service-desc">Custom websites, web applications, and portals built for performance, conversion, and scalability. From landing pages to full-stack platforms.</p>
+          <ul class="service-features">
+            <li>Business websites & portfolios</li>
+            <li>E-commerce & booking systems</li>
+            <li>Admin dashboards & portals</li>
+            <li>WordPress & CMS solutions</li>
+          </ul>
+        </div>
+
+        <div class="service-card fade-up delay-2">
+          <div class="service-icon">
+            <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="8" width="12" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+              <rect x="22" y="8" width="12" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+              <rect x="12" y="22" width="12" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M14 12h8M18 16v6" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Network Setup for SMEs</h3>
+          <p class="service-desc">Reliable, secure, and scalable network infrastructure design and deployment for small and medium businesses — from cabling to cloud.</p>
+          <ul class="service-features">
+            <li>LAN/WAN design & deployment</li>
+            <li>VLAN & firewall configuration</li>
+            <li>WiFi & hotspot systems</li>
+            <li>Network audits & troubleshooting</li>
+          </ul>
+        </div>
+
+        <div class="service-card fade-up delay-3">
+          <div class="service-icon">
+            <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="18" cy="18" r="14" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 18l4 4 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18 4v4M18 28v4M4 18h4M28 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="service-title">System Automation</h3>
+          <p class="service-desc">Python-powered automation scripts and tools that eliminate repetitive tasks, reduce errors, and free your team to focus on what matters.</p>
+          <ul class="service-features">
+            <li>Workflow & process automation</li>
+            <li>Data scraping & processing</li>
+            <li>Report generation tools</li>
+            <li>API integration & bots</li>
+          </ul>
+        </div>
+
+        <div class="service-card fade-up delay-4">
+          <div class="service-icon">
+            <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 28L12 18l6 6 6-10 8 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="28" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M27 8h2M28 7v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="service-title">SEO & Digital Optimization</h3>
+          <p class="service-desc">Technical SEO, analytics setup, and digital growth strategies that turn your website from a digital brochure into a conversion machine.</p>
+          <ul class="service-features">
+            <li>Technical SEO audits</li>
+            <li>Google Analytics & Search Console</li>
+            <li>Performance optimization</li>
+            <li>Content & funnel strategy</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="services-cta fade-up delay-5">
+        <p>Ready to build your digital infrastructure?</p>
+        <a href="#contact" class="btn btn-primary btn-lg">
+          Let's Build Your System
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer role="contentinfo">
-    <div class="footer-content">
-      <span class="footer-logo">Sam MK<span aria-hidden="true">.</span></span>
-      <span class="footer-mid">Network and System Software Engineer · Architected for Performance — Crafted for Users · © 2026</span>
-      <a href="#hero" class="footer-back">Back to top ↑</a>
+  <!-- ═══════════ CONTACT ═══ -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info fade-left">
+          <h2 class="section-title">Let's <em>Work Together</em></h2>
+          <p class="contact-lead">Have a project, a problem, or just want to explore what's possible? Let's talk digital infrastructure.</p>
+
+          <div class="contact-items">
+            <a href="mailto:hellosammykasango@gmail.com" class="contact-item">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="4" width="20" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 7l10 7 10-7" stroke="currentColor" stroke-width="2"/></svg>
+              </div>
+              <div>
+                <span class="contact-item-label">Email</span>
+                <span class="contact-item-value">hellosammykasango@gmail.com</span>
+              </div>
+            </a>
+
+            <a href="https://wa.me/254792697745" target="_blank" class="contact-item">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <span class="contact-item-label">WhatsApp</span>
+                <span class="contact-item-value">Chat with me directly</span>
+              </div>
+            </a>
+
+            <a href="https://linkedin.com/in/sammykasango" target="_blank" class="contact-item">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+              </div>
+              <div>
+                <span class="contact-item-label">LinkedIn</span>
+                <span class="contact-item-value">Sammy M. Kasango</span>
+              </div>
+            </a>
+            <a href="https://github.com/sammykasango" target="_blank" class="contact-item">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <span class="contact-item-label">GitHub</span>
+                <span class="contact-item-value">@sammykasango</span>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="contact-form-wrap fade-right">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Project inquiry, collaboration…" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              Send Message
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </button>
+            <div class="form-success" id="formSuccess">
+              ✓ Message sent! I'll get back to you within 24 hours.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo">
+            <span class="logo-bracket">[</span>SK<span class="logo-bracket">]</span>
+          </a>
+          <p class="footer-tagline">Digital Infrastructure Engineer<br/>for the Modern Digital Economy</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <a href="#about">About</a>
+          <a href="#pillars">Expertise</a>
+          <a href="#projects">Projects</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-social">
+          <h4>Connect</h4>
+          <div class="social-icons">
+            <a href="https://github.com/sammykasango" target="_blank" aria-label="GitHub" class="social-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/sammykasango" target="_blank" aria-label="LinkedIn" class="social-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </a>
+            <a href="https://youtube.com/@sammykasango" target="_blank" aria-label="YouTube" class="social-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </a>
+            <a href="mailto:hellosammykasango@gmail.com" aria-label="Email" class="social-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="4" width="20" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 7l10 7 10-7" stroke="currentColor" stroke-width="2"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sammy M. Kasango · All rights reserved.</p>
+        <p class="footer-handle">@sammykasango</p>
+      </div>
     </div>
   </footer>
 
-<script>
-/* =====================================================
-   UTILITY
-===================================================== */
-const $ = s => document.querySelector(s);
-const $$ = s => document.querySelectorAll(s);
-const lerp = (a, b, t) => a + (b - a) * t;
-const clamp = (v, lo, hi) => Math.min(Math.max(v, lo), hi);
-const isMobile = window.matchMedia('(max-width: 820px)').matches;
-const noMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-/* =====================================================
-   PARTICLE CANVAS
-===================================================== */
-const canvas = $('#particle-canvas');
-const ctx = canvas.getContext('2d');
-let W, H, particles = [];
-
-const PARTICLE_COUNT = isMobile ? 40 : 90;
-
-function resize() {
-  W = canvas.width = window.innerWidth;
-  H = canvas.height = window.innerHeight;
-}
-resize();
-window.addEventListener('resize', resize, { passive: true });
-
-class Particle {
-  constructor() { this.reset(true); }
-  reset(initial = false) {
-    this.x  = Math.random() * W;
-    this.y  = initial ? Math.random() * H : H + 10;
-    this.vx = (Math.random() - 0.5) * 0.4;
-    this.vy = -(0.25 + Math.random() * 0.55);
-    this.r  = 1.2 + Math.random() * 2;
-    this.alpha = 0.08 + Math.random() * 0.22;
-    this.life = 1;
-  }
-  update() {
-    this.x += this.vx;
-    this.y += this.vy;
-    this.life -= 0.0018;
-    if (this.y < -10 || this.life <= 0) this.reset();
-  }
-  draw() {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(184,94,26,${this.alpha * this.life})`;
-    ctx.fill();
-  }
-}
-
-for (let i = 0; i < PARTICLE_COUNT; i++) particles.push(new Particle());
-
-function animParticles() {
-  ctx.clearRect(0, 0, W, H);
-  particles.forEach(p => { p.update(); p.draw(); });
-  requestAnimationFrame(animParticles);
-}
-if (!noMotion) animParticles();
-
-
-const tags = document.querySelectorAll('.tag-item');
-let currentIndex = 0;
-
-function rotateTags() {
-  const currentTag = tags[currentIndex];
-  
-  // 1. Mark current tag to exit
-  currentTag.classList.remove('active');
-  currentTag.classList.add('exit');
-
-  // 2. Move to next index
-  currentIndex = (currentIndex + 1) % tags.length;
-  const nextTag = tags[currentIndex];
-
-  // 3. Reset the exit tag and activate next
-  setTimeout(() => {
-    currentTag.classList.remove('exit');
-  }, 600); // Matches CSS transition time
-
-  nextTag.classList.add('active');
-}
-
-setInterval(rotateTags, 3000); // 3 seconds interval
-
-/* =====================================================
-   CUSTOM MAGNETIC CURSOR
-===================================================== */
-const cur  = $('#cursor');
-const fol  = $('#cursor-follower');
-const curL = $('#cursor-label');
-const isTouchDevice = window.matchMedia('(hover: none)').matches;
-
-if (!isTouchDevice) {
-  let mx = -200, my = -200, fx = -200, fy = -200;
-  let tx = -200, ty = -200; // target for magnetic snap
-
-  document.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
-    cur.style.left = mx + 'px'; cur.style.top = my + 'px';
-  });
-
-  (function animCursor() {
-    fx = lerp(fx, mx, 0.14);
-    fy = lerp(fy, my, 0.14);
-    fol.style.left = fx + 'px'; fol.style.top = fy + 'px';
-    requestAnimationFrame(animCursor);
-  })();
-
-  // Magnetic pull on project thumbs + buttons
-  $$('.project-thumb, .btn-primary, .nav-cta, .hf-arrow').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-      cur.classList.add('h');
-      fol.classList.add('h');
-      const label = el.dataset.cursorLabel;
-      if (label) { curL.textContent = label; curL.classList.add('show'); }
-    });
-    el.addEventListener('mouseleave', () => {
-      cur.classList.remove('h');
-      fol.classList.remove('h');
-      curL.classList.remove('show');
-    });
-  });
-
-  $$('a:not(.project-thumb):not(.btn-primary):not(.nav-cta), .skill-card, .contact-card').forEach(el => {
-    el.addEventListener('mouseenter', () => { cur.classList.add('h'); fol.classList.add('h'); });
-    el.addEventListener('mouseleave', () => { cur.classList.remove('h'); fol.classList.remove('h'); });
-  });
-
-} else {
-  cur?.remove(); fol?.remove(); curL?.remove();
-  document.body.style.cursor = 'auto';
-}
-
-/* =====================================================
-   HERO PARALLAX
-===================================================== */
-if (!isMobile && !noMotion) {
-  const heroLeft  = $('#hero-left');
-  const heroRight = $('#hero-right');
-  const bgText    = $('#hero-bg-text');
-
-  window.addEventListener('mousemove', e => {
-    const rx = (e.clientX / W - 0.5) * 2;
-    const ry = (e.clientY / H - 0.5) * 2;
-    if (heroLeft)  heroLeft.style.transform  = `translate(${rx * -6}px, ${ry * -4}px)`;
-    if (heroRight) heroRight.style.transform = `translate(${rx * 4}px, ${ry * 3}px)`;
-    if (bgText)    bgText.style.transform    = `translate(${rx * 18}px, ${ry * 10}px)`;
-  }, { passive: true });
-}
-
-/* =====================================================
-   3D TILT CARDS
-===================================================== */
-if (!isMobile && !noMotion) {
-  $$('.tilt-card').forEach(card => {
-    const inner = card.querySelector('.tilt-inner');
-    card.addEventListener('mousemove', e => {
-      const rect = card.getBoundingClientRect();
-      const x = ((e.clientX - rect.left) / rect.width  - 0.5) * 2;
-      const y = ((e.clientY - rect.top)  / rect.height - 0.5) * 2;
-      card.style.transform = `perspective(800px) rotateY(${x * 10}deg) rotateX(${-y * 10}deg) scale(1.03)`;
-      if (inner) inner.style.transform = `translateZ(16px)`;
-    });
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = '';
-      if (inner) inner.style.transform = '';
-    });
-  });
-}
-
-/* =====================================================
-   TYPEWRITER — role line
-===================================================== */
-const roles = [
-  'full-stack web apps.',
-  'developer tooling.',
-  'high-scale APIs.',
-  'softwares that Scale.',
-];
-let rIdx = 0, cIdx = 0, deleting = false;
-const typedEl = $('#role-typed');
-
-function typeRole() {
-  if (!typedEl || noMotion) {
-    if (typedEl) typedEl.textContent = roles[0];
-    return;
-  }
-  const word = roles[rIdx];
-  if (!deleting) {
-    typedEl.textContent = word.slice(0, cIdx + 1);
-    cIdx++;
-    if (cIdx === word.length) {
-      deleting = true;
-      return setTimeout(typeRole, 1800);
-    }
-  } else {
-    typedEl.textContent = word.slice(0, cIdx - 1);
-    cIdx--;
-    if (cIdx === 0) {
-      deleting = false;
-      rIdx = (rIdx + 1) % roles.length;
-    }
-  }
-  setTimeout(typeRole, deleting ? 42 : 68);
-}
-
-/* =====================================================
-   COUNT-UP STATS
-===================================================== */
-function animateCount(el) {
-  const target = parseInt(el.dataset.target);
-  const suffix = el.dataset.suffix || '';
-  const dur    = 1600;
-  const start  = performance.now();
-  function frame(now) {
-    const t = Math.min((now - start) / dur, 1);
-    const eased = 1 - Math.pow(1 - t, 3);
-    el.textContent = Math.floor(eased * target) + suffix;
-    if (t < 1) requestAnimationFrame(frame);
-  }
-  requestAnimationFrame(frame);
-}
-const statObs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) { animateCount(e.target); statObs.unobserve(e.target); }
-  });
-}, { threshold: 0.5 });
-$$('.count-up').forEach(el => statObs.observe(el));
-
-/* =====================================================
-   SCROLL REVEAL
-===================================================== */
-const revEls = $$('.reveal');
-function checkReveal() {
-  revEls.forEach(el => {
-    if (el.getBoundingClientRect().top < window.innerHeight * 0.9)
-      el.classList.add('visible');
-  });
-}
-window.addEventListener('scroll', checkReveal, { passive: true });
-
-/* =====================================================
-   ACTIVE NAV
-===================================================== */
-const navLinks = $$('.nav-links a');
-const secs = $$('section[id]');
-window.addEventListener('scroll', () => {
-  let active = '';
-  secs.forEach(s => { if (window.scrollY >= s.offsetTop - 160) active = s.id; });
-  navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + active));
-  $('#navbar').classList.toggle('scrolled', window.scrollY > 50);
-}, { passive: true });
-
-/* =====================================================
-   BADGE ROTATION
-===================================================== */
-let ang = 0;
-const bRing = $('.badge-ring');
-if (bRing && !noMotion) (function rotateBadge() {
-  ang += 0.28;
-  bRing.style.transform = `rotate(${ang}deg)`;
-  requestAnimationFrame(rotateBadge);
-})();
-
-/* =====================================================
-   SKILL BAR ANIMATE + SHIMMER
-===================================================== */
-const sbObs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.querySelectorAll('.skill-bar').forEach(b => b.classList.add('animate'));
-      sbObs.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.4 });
-$$('.skill-card').forEach(c => sbObs.observe(c));
-
-/* =====================================================
-   BUTTON RIPPLE
-===================================================== */
-$$('.btn-primary, .plink-live').forEach(btn => {
-  btn.addEventListener('click', function(e) {
-    const ripple = document.createElement('span');
-    ripple.className = 'btn-ripple-burst';
-    const rect = this.getBoundingClientRect();
-    const size = Math.max(rect.width, rect.height) * 2;
-    ripple.style.cssText = `width:${size}px;height:${size}px;left:${e.clientX - rect.left - size/2}px;top:${e.clientY - rect.top - size/2}px`;
-    this.appendChild(ripple);
-    setTimeout(() => ripple.remove(), 600);
-  });
-});
-
-/* =====================================================
-   PROJECT ITEM HOVER GLOW
-===================================================== */
-$$('.project-item').forEach(item => {
-  item.addEventListener('mousemove', e => {
-    const rect = item.getBoundingClientRect();
-    item.style.setProperty('--mx', (e.clientX - rect.left) + 'px');
-    item.style.setProperty('--my', (e.clientY - rect.top)  + 'px');
-  });
-});
-
-/* =====================================================
-   TICKER: pause on hover, stop on reduced-motion
-===================================================== */
-const track = $('.descriptor-track');
-if (track && noMotion) track.style.animation = 'none';
-
-/* =====================================================
-   HERO ENTRANCE SEQUENCE
-===================================================== */
-function forceShowAll() {
-  // Safety net: make absolutely everything visible regardless of JS timing
-  $$('.letter').forEach(el => el.classList.add('visible'));
-  ['.hero-eyebrow','.hero-role-line','.hero-descriptor',
-   '.hero-bio','.hero-featured','.btn-primary',
-   '.hero-stats','.hero-scroll','.hero-badge'
-  ].forEach(sel => { const el = $(sel); if (el) el.classList.add('visible'); });
-}
-
-window.addEventListener('load', () => {
-  if (noMotion) {
-    forceShowAll();
-    checkReveal();
-    setTimeout(typeRole, 400);
-    return;
-  }
-
-  // Stagger letters in
-  $$('.letter').forEach((l, i) => setTimeout(() => l.classList.add('visible'), 80 + i * 50));
-
-  const heroSeq = [
-    { sel: '.hero-eyebrow',    delay: 80   },
-    { sel: '.hero-role-line',  delay: 580  },
-    { sel: '.hero-descriptor', delay: 740  },
-    { sel: '.hero-bio',        delay: 460  },
-    { sel: '.hero-featured',   delay: 640  },
-    { sel: '.btn-primary',     delay: 800  },
-    { sel: '.hero-stats',      delay: 940  },
-    { sel: '.hero-scroll',     delay: 1080 },
-    { sel: '.hero-badge',      delay: 1180 },
-  ];
-  heroSeq.forEach(({ sel, delay }) => {
-    const el = $(sel);
-    if (el) setTimeout(() => el.classList.add('visible'), delay);
-  });
-
-  // Safety net: if anything still invisible after 3s, force show everything
-  setTimeout(forceShowAll, 3000);
-
-  setTimeout(typeRole, 860);
-  checkReveal();
-});
-</script>
+  <script src="scripts.js"></script>
 </body>
 </html>
