@@ -255,8 +255,11 @@ function initContactForm() {
   }
 
   // Initialize EmailJS with public key
+  let emailJsReady = false;
+
   try {
     emailjs.init('MqCfQKZ5Os3mP29aV');
+    emailJsReady = true;
     console.log('EmailJS initialized successfully');
   } catch (e) {
     console.error('EmailJS initialization failed:', e);
@@ -264,12 +267,26 @@ function initContactForm() {
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log('Form submitted, preventing default...');
 
     const btn = form.querySelector('button[type="submit"]');
-    const originalText = btn.innerHTML;
+    if (!btn) return;
 
-    // Loading state
+    const originalText = btn.innerHTML;
+    const restoreButton = () => {
+      btn.innerHTML = originalText;
+      btn.disabled = false;
+      btn.removeAttribute('aria-busy');
+    };
+
+    const showMessage = (message, isError = false) => {
+      if (!success) return;
+      success.textContent = message;
+      success.style.background = isError ? 'rgba(239, 68, 68, 0.12)' : '';
+      success.style.borderLeftColor = isError ? '#ef4444' : '';
+      success.classList.add('show');
+      setTimeout(() => success.classList.remove('show'), 4000);
+    };
+
     btn.innerHTML = `
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="animation: spin 1s linear infinite">
         <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0"/>
@@ -278,69 +295,51 @@ function initContactForm() {
       Sending…
     `;
     btn.disabled = true;
+    btn.setAttribute('aria-busy', 'true');
 
-    // Prepare template parameters
-    const formData = {
-      name: form.querySelector('#name').value,
-      email: form.querySelector('#email').value,
-      subject: form.querySelector('#subject').value || 'No subject',
-      message: form.querySelector('#message').value
+    const templateParams = {
+      from_name: form.querySelector('#name')?.value.trim() || 'Guest',
+      from_email: form.querySelector('#email')?.value.trim(),
+      subject: form.querySelector('#subject')?.value.trim() || 'New project inquiry',
+      message: form.querySelector('#message')?.value.trim(),
     };
 
-    console.log('Sending form data:', formData);
+    if (!templateParams.from_email || !templateParams.message) {
+      restoreButton();
+      showMessage('✗ Please fill in your email and message before sending.', true);
+      return;
+    }
 
-    // Create a timeout promise that rejects after 8 seconds
+    if (!emailJsReady || !window.emailjs || typeof window.emailjs.send !== 'function') {
+      restoreButton();
+      showMessage('✗ Email service unavailable. Please try again later.', true);
+      return;
+    }
+
+    let sendPromise;
+    try {
+      sendPromise = emailjs.send('service_1y7rphm', 'template_rn6nmas', templateParams);
+    } catch (sendError) {
+      console.error('EmailJS send error:', sendError);
+      restoreButton();
+      showMessage('✗ Could not send your message. Please try again later.', true);
+      return;
+    }
+
     const timeoutPromise = new Promise((_, reject) =>
-      setTimeout(() => reject(new Error('Request timeout')), 8000)
+      setTimeout(() => reject(new Error('Email request timed out')), 10000)
     );
 
-    // Race between EmailJS send and timeout
-    Promise.race([
-      emailjs.send(
-        'service_1y7rphm',
-        'template_rn6nmas',
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-        },
-        'MqCfQKZ5Os3mP29aV'
-      ),
-      timeoutPromise
-    ])
-      .then((response) => {
-        console.log('✓ Message sent successfully:', response);
-        btn.innerHTML = originalText;
-        btn.disabled = false;
+    Promise.race([sendPromise, timeoutPromise])
+      .then(() => {
+        restoreButton();
         form.reset();
-
-        if (success) {
-          success.textContent = '✓ Message sent! I\'ll get back to you within 24 hours.';
-          success.style.background = '';
-          success.style.borderLeftColor = '';
-          success.classList.add('show');
-          setTimeout(() => success.classList.remove('show'), 4000);
-        }
+        showMessage('✓ Message sent! I\'ll get back to you within 24 hours.');
       })
       .catch((error) => {
-        console.error('✗ Failed to send message:', error);
-        btn.innerHTML = originalText;
-        btn.disabled = false;
-        
-        // Show error message
-        if (success) {
-          success.textContent = '✗ Failed to send. Please check your connection and try again.';
-          success.style.background = 'rgba(239, 68, 68, 0.1)';
-          success.style.borderLeftColor = '#ef4444';
-          success.classList.add('show');
-          setTimeout(() => {
-            success.textContent = '✓ Message sent! I\'ll get back to you within 24 hours.';
-            success.style.background = '';
-            success.style.borderLeftColor = '';
-            success.classList.remove('show');
-          }, 4000);
-        }
+        console.error('EmailJS submission failed:', error);
+        restoreButton();
+        showMessage('✗ Failed to send. Please check your connection and try again.', true);
       });
   });
 }
