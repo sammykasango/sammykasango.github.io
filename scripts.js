@@ -254,16 +254,39 @@ function initContactForm() {
     return;
   }
 
-  // Initialize EmailJS with public key
+  const serviceId = 'service_1y7rphm';
+  const templateId = 'template_rn6nmas';
+  const publicKey = 'MqCfQKZ5Os3mP29aV';
+
   let emailJsReady = false;
 
-  try {
-    emailjs.init('MqCfQKZ5Os3mP29aV');
-    emailJsReady = true;
-    console.log('EmailJS initialized successfully');
-  } catch (e) {
-    console.error('EmailJS initialization failed:', e);
+  if (window.emailjs && typeof window.emailjs.init === 'function') {
+    try {
+      emailjs.init(publicKey);
+      emailJsReady = true;
+      console.log('EmailJS initialized successfully');
+    } catch (e) {
+      console.error('EmailJS initialization failed:', e);
+    }
+  } else {
+    console.error('EmailJS library is not loaded or is unavailable on this page.');
   }
+
+  const restoreButton = (btn, originalText) => {
+    if (!btn) return;
+    btn.innerHTML = originalText;
+    btn.disabled = false;
+    btn.removeAttribute('aria-busy');
+  };
+
+  const showMessage = (message, isError = false) => {
+    if (!success) return;
+    success.textContent = message;
+    success.style.background = isError ? 'rgba(239, 68, 68, 0.12)' : '';
+    success.style.borderLeftColor = isError ? '#ef4444' : '';
+    success.classList.add('show');
+    setTimeout(() => success.classList.remove('show'), 4000);
+  };
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -272,21 +295,6 @@ function initContactForm() {
     if (!btn) return;
 
     const originalText = btn.innerHTML;
-    const restoreButton = () => {
-      btn.innerHTML = originalText;
-      btn.disabled = false;
-      btn.removeAttribute('aria-busy');
-    };
-
-    const showMessage = (message, isError = false) => {
-      if (!success) return;
-      success.textContent = message;
-      success.style.background = isError ? 'rgba(239, 68, 68, 0.12)' : '';
-      success.style.borderLeftColor = isError ? '#ef4444' : '';
-      success.classList.add('show');
-      setTimeout(() => success.classList.remove('show'), 4000);
-    };
-
     btn.innerHTML = `
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="animation: spin 1s linear infinite">
         <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0"/>
@@ -297,49 +305,36 @@ function initContactForm() {
     btn.disabled = true;
     btn.setAttribute('aria-busy', 'true');
 
-    const templateParams = {
-      from_name: form.querySelector('#name')?.value.trim() || 'Guest',
-      from_email: form.querySelector('#email')?.value.trim(),
-      subject: form.querySelector('#subject')?.value.trim() || 'New project inquiry',
-      message: form.querySelector('#message')?.value.trim(),
-    };
+    const senderEmail = form.querySelector('#email')?.value.trim();
+    const messageText = form.querySelector('#message')?.value.trim();
 
-    if (!templateParams.from_email || !templateParams.message) {
-      restoreButton();
-      showMessage('✗ Please fill in your email and message before sending.', true);
+    if (!senderEmail || !messageText) {
+      restoreButton(btn, originalText);
+      showMessage('✗ Email and message are required.', true);
       return;
     }
 
-    if (!emailJsReady || !window.emailjs || typeof window.emailjs.send !== 'function') {
-      restoreButton();
-      showMessage('✗ Email service unavailable. Please try again later.', true);
+    if (!emailJsReady) {
+      restoreButton(btn, originalText);
+      showMessage('✗ EmailJS is not ready. Please refresh the page or check console errors.', true);
       return;
     }
 
-    let sendPromise;
-    try {
-      sendPromise = emailjs.send('service_1y7rphm', 'template_rn6nmas', templateParams);
-    } catch (sendError) {
-      console.error('EmailJS send error:', sendError);
-      restoreButton();
-      showMessage('✗ Could not send your message. Please try again later.', true);
-      return;
-    }
-
+    const sendPromise = emailjs.sendForm(serviceId, templateId, form);
     const timeoutPromise = new Promise((_, reject) =>
       setTimeout(() => reject(new Error('Email request timed out')), 10000)
     );
 
     Promise.race([sendPromise, timeoutPromise])
       .then(() => {
-        restoreButton();
+        restoreButton(btn, originalText);
         form.reset();
         showMessage('✓ Message sent! I\'ll get back to you within 24 hours.');
       })
       .catch((error) => {
         console.error('EmailJS submission failed:', error);
-        restoreButton();
-        showMessage('✗ Failed to send. Please check your connection and try again.', true);
+        restoreButton(btn, originalText);
+        showMessage(`✗ Failed to send: ${error?.message || 'Please try again.'}`, true);
       });
   });
 }
