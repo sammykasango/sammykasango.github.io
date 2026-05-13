@@ -58,7 +58,7 @@ Currently pursuing a **B.Sc. in Software Engineering** at Murang'a University of
 | Metric | Value |
 |:-------|:------|
 | 🚀 Projects Shipped | 30+ |
-| 🔧 Years Engineering | 3+ |
+| 🔧 Years Engineering | 3+ Experience |
 | 📈 HubSpot Certified | March 2026 |
 | 🖧 Cisco Networking | Certified |
 
