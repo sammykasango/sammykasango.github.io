@@ -1003,7 +1003,6 @@ h1, h2, h3, h4 {
     border-bottom: 1px solid rgba(255,255,255,0.08); 
     z-index: 999;
   }
-
   .section { padding: 4rem 0; }
   .hero-stats { gap: 1rem; } .stat-divider { height: 30px; }
   .about-grid { grid-template-columns: 1fr; gap: 2rem; }
