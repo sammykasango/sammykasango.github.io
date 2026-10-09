@@ -257,23 +257,23 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "vision-school",
-    title: "Vision Kindergarten & Primary School Platform",
+    id: "nuru-oil-solutions",
+    title: "Nuru Oil Solutions Premium Brand Platform",
     category: "digital",
-    categoryLabel: "Software",
+    categoryLabel: "Digital",
     year: "2026",
     problem:
-      "Educational institutions operating under modern CBC systems face challenges tracking comprehensive multi-tier structures, handling admissions transparently, and managing communications across web touchpoints without high infrastructure costs.",
+      "Industrial, automotive, and wellness buyers needed a premium B2B storefront that communicated trust, product quality, and wholesale scale without the look of a generic commodity supplier.",
     solution:
-      "Engineered a lightweight, type-safe full-stack school portal framework optimized for direct static deployment using TanStack Start and Tailwind CSS v4, with Cloudflare environments and a Git automation pipeline.",
+      "Designed and adapted a luxury, conversion-focused oil brand experience with elevated editorial styling, category-driven messaging, and a smooth mobile-first storefront flow tailored for wholesale inquiries and premium service positioning.",
     impact:
-      "Serverless static deployment delivering fast page performance, Google Search Console integration, responsive mobile navigation and CBC-oriented onboarding.",
-    technologies: ["TypeScript", "TanStack Start", "Tailwind CSS v4", "Cloudflare", "GitHub Actions"],
-    metrics: ["Static Deploy", "Search Console", "Responsive"],
+      "Created a polished digital presence that strengthens brand credibility, improves lead capture, and positions the business as a premium oils supplier across commercial and wellness markets.",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Netlify", "Responsive UI"],
+    metrics: ["Luxury Brand", "B2B Ready", "High Trust", "Mobile-first"],
     visual: "browser",
     links: [
-      { label: "Visit Live Site", href: "https://sammykasango.github.io/", primary: true },
-      { label: "View Source", href: "https://github.com/sammykasango" },
+      { label: "Visit Live Site", href: "https://nuru-oil-solutions.netlify.app/", primary: true },
+      { label: "Request Quote", href: "https://nuru-oil-solutions.netlify.app/" },
     ],
   },
 ];
