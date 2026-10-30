@@ -32,16 +32,14 @@ export function Hero() {
           <Reveal delay={80}>
             <p className="label-mono mt-8 text-muted-foreground">Digital Systems Engineer</p>
             <h1 className="mt-4 font-display text-[2.6rem] leading-[1.02] font-bold tracking-tight sm:text-6xl xl:text-7xl">
-              Architecting <span className="text-amber">Digital Systems</span> That Move Businesses
-              Forward.
+              Building <span className="text-amber">Digital Systems</span> That Scale Growth Possibilities.
             </h1>
           </Reveal>
 
           <Reveal delay={160}>
             <p className="mt-7 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              I build high-performance digital infrastructure that helps businesses scale, automate,
-              and thrive — combining software engineering, network infrastructure, and digital
-              growth strategy.
+              I work with people and teams to turn ambitious ideas into useful software, connected
+              infrastructure, and digital experiences—bringing clarity from challenge to delivery.
             </p>
           </Reveal>
 
@@ -112,7 +110,7 @@ export function Hero() {
 
       <div className="relative mx-auto mt-16 max-w-[1280px] px-5 sm:px-8">
         <p className="label-mono border-t border-border pt-5 text-muted-foreground">
-          Software × Network × Growth — Building Digital Infrastructure
+          Software × Network × Growth — Digital Infrastructure
         </p>
       </div>
     </section>

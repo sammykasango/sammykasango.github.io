@@ -16,17 +16,17 @@ export const outcomes = [
   {
     n: "01",
     title: "Scalable Software",
-    body: "Scalable software systems that reduce manual work and improve efficiency.",
+    body: "Useful tools that simplify work and help people focus on what matters.",
   },
   {
     n: "02",
     title: "Secure Infrastructure",
-    body: "Secure network design that keeps operations reliable and connected.",
+    body: "Reliable networks that keep teams, devices, and services connected.",
   },
   {
     n: "03",
     title: "Measurable Growth",
-    body: "SEO and digital strategy built around measurable growth and visibility.",
+    body: "Digital experiences that help people discover and engage.",
   },
 ];
 
@@ -35,7 +35,7 @@ export const expertise = [
     n: "01",
     name: "Software Systems",
     description:
-      "Engineering robust applications and automation tools that power modern business operations.",
+      "Building useful applications and automation around the needs of the people who use them.",
     capabilities: [
       "Web applications & portals",
       "Automation & scripting tools",
@@ -49,7 +49,7 @@ export const expertise = [
     n: "02",
     name: "Network Infrastructure",
     description:
-      "Designing and securing networks that form the backbone of reliable digital operations.",
+      "Designing secure, dependable networks that keep teams, devices, and services connected.",
     capabilities: [
       "LAN/WAN architecture & design",
       "Network security & hardening",
@@ -63,7 +63,7 @@ export const expertise = [
     n: "03",
     name: "Digital Growth Systems",
     description:
-      "Combining technology with marketing intelligence for measurable market growth.",
+      "Aligning technology and digital strategy with audience needs to support sustainable growth.",
     capabilities: [
       "SEO-optimized platforms",
       "Marketing funnels & automation",
@@ -124,38 +124,31 @@ export const services = [
   {
     n: "01",
     title: "Website & Web App Development",
-    description:
-      "Custom websites, web applications, and portals built for performance, conversion, and scalability — from landing pages to full-stack platforms.",
+    description: "Websites and apps shaped around user needs, clear goals, and lasting performance.",
     capabilities: [
       "Business websites & portfolios",
       "Conversion-focused landing pages",
       "E-commerce & booking systems",
-      "Admin dashboards & portals",
-      "WordPress & CMS solutions",
     ],
     cta: "Build a Web System",
   },
   {
     n: "02",
     title: "Network Setup for SMEs",
-    description:
-      "Reliable, secure, and scalable network infrastructure design and deployment for small and medium businesses — from cabling to cloud.",
+    description: "Secure, dependable networks that keep teams connected and work moving.",
     capabilities: [
       "LAN/WAN design & deployment",
       "VLAN & firewall configuration",
       "WiFi & hotspot systems",
-      "Network audits & troubleshooting",
     ],
     cta: "Design a Network",
   },
   {
     n: "03",
     title: "System Automation",
-    description:
-      "Python-powered automation scripts and tools that eliminate repetitive tasks, reduce errors, and free teams to focus on what matters.",
+    description: "Practical automation that gives teams time back and reduces avoidable errors.",
     capabilities: [
       "Workflow & process automation",
-      "Data scraping & processing",
       "Report generation tools",
       "API integration & bots",
     ],
@@ -164,13 +157,11 @@ export const services = [
   {
     n: "04",
     title: "SEO & Digital Optimization",
-    description:
-      "Technical SEO, analytics setup, and digital growth strategies that turn a website from a digital brochure into a conversion machine.",
+    description: "SEO and analytics that help people find, understand, and act on what you offer.",
     capabilities: [
       "Technical SEO audits",
       "Google Analytics & Search Console",
       "Performance optimization",
-      "Content & funnel strategy",
     ],
     cta: "Optimize Growth",
   },
@@ -182,11 +173,8 @@ export type Project = {
   category: "software" | "network" | "digital";
   categoryLabel: string;
   year: string;
-  problem: string;
-  solution: string;
   impact: string;
   technologies: string[];
-  metrics: string[];
   visual: "code" | "dashboard" | "topology" | "browser";
   links: { label: string; href: string; primary?: boolean }[];
 };
@@ -198,14 +186,9 @@ export const projects: Project[] = [
     category: "software",
     categoryLabel: "Software",
     year: "2026",
-    problem:
-      "Manual code reviews in C++ projects miss recurring anti-patterns, slowing down team velocity.",
-    solution:
-      "A modular 35-file static analysis system with a Lexer, AST Builder, and 7 specialized detectors running 84 automated tests.",
     impact:
-      "Automated code quality checks — reducing review effort and improving codebase maintainability.",
+      "Automates recurring code-quality checks to support consistent reviews and easier maintenance.",
     technologies: ["C++", "AST", "Lexer", "Unit Testing"],
-    metrics: ["7 Detectors", "84 Tests", "35 Source Files", "0 Dependencies"],
     visual: "code",
     links: [
       {
@@ -213,7 +196,7 @@ export const projects: Project[] = [
         href: "https://sammykasango.github.io/code-smell-detector",
         primary: true,
       },
-      { label: "View Source", href: "https://github.com/sammykasango" },
+      { label: "GitHub Profile", href: "https://github.com/sammykasango" },
     ],
   },
   {
@@ -222,18 +205,12 @@ export const projects: Project[] = [
     category: "software",
     categoryLabel: "Software",
     year: "2026",
-    problem:
-      "Manual church member management led to duplicates, lost records, and inefficient reporting.",
-    solution:
-      "Python desktop application with Tkinter UI, ReportLab PDF generation, duplicate prevention logic, and a professional dark-theme sidebar dashboard.",
     impact:
-      "Centralized member records, automated PDF reporting, and eliminated data duplication for a growing church organization.",
+      "Centralizes member records and reporting, helping teams manage information more consistently.",
     technologies: ["Python", "Tkinter", "ReportLab", "SQLite"],
-    metrics: ["Desktop App", "PDF Reporting", "Duplicate Prevention"],
     visual: "dashboard",
     links: [
-      { label: "View Project", href: "https://github.com/sammykasango", primary: true },
-      { label: "GitHub", href: "https://github.com/sammykasango" },
+      { label: "GitHub Profile", href: "https://github.com/sammykasango", primary: true },
     ],
   },
   {
@@ -242,18 +219,12 @@ export const projects: Project[] = [
     category: "network",
     categoryLabel: "Network",
     year: "2026",
-    problem:
-      "University network simulation required segmented VLANs with inter-VLAN routing and dynamic IP allocation.",
-    solution:
-      "Full Cisco Packet Tracer topology with VLAN configuration, VLSM addressing, Router-on-a-Stick, and DHCP across multiple departments.",
     impact:
-      "Demonstrated production-grade network segmentation and routing skills for a secure enterprise VLAN environment.",
+      "Demonstrates segmented routing designed to keep users and network services reliably connected.",
     technologies: ["Cisco IOS", "VLAN", "VLSM", "DHCP", "Router-on-a-Stick"],
-    metrics: ["Multi-Department", "Inter-VLAN Routing", "DHCP Scopes"],
     visual: "topology",
     links: [
-      { label: "View Project", href: "https://github.com/sammykasango", primary: true },
-      { label: "GitHub", href: "https://github.com/sammykasango" },
+      { label: "GitHub Profile", href: "https://github.com/sammykasango", primary: true },
     ],
   },
   {
@@ -262,18 +233,12 @@ export const projects: Project[] = [
     category: "digital",
     categoryLabel: "Digital",
     year: "2026",
-    problem:
-      "Industrial, automotive, and wellness buyers needed a premium B2B storefront that communicated trust, product quality, and wholesale scale without the look of a generic commodity supplier.",
-    solution:
-      "Designed and adapted a luxury, conversion-focused oil brand experience with elevated editorial styling, category-driven messaging, and a smooth mobile-first storefront flow tailored for wholesale inquiries and premium service positioning.",
     impact:
-      "Created a polished digital presence that strengthens brand credibility, improves lead capture, and positions the business as a premium oils supplier across commercial and wellness markets.",
+      "A polished, mobile-first storefront designed to strengthen trust and support wholesale inquiries.",
     technologies: ["React", "TypeScript", "Tailwind CSS", "Netlify", "Responsive UI"],
-    metrics: ["Luxury Brand", "B2B Ready", "High Trust", "Mobile-first"],
     visual: "browser",
     links: [
       { label: "Visit Live Site", href: "https://nuru-oil-solutions.netlify.app/", primary: true },
-      { label: "Request Quote", href: "https://nuru-oil-solutions.netlify.app/" },
     ],
   },
 ];
@@ -285,26 +250,10 @@ export const filters = [
   { id: "digital", label: "Digital" },
 ] as const;
 
-export const philosophySteps = [
-  { n: "01", title: "Understand", body: "Understand the business, users and operational challenge." },
-  { n: "02", title: "Architect", body: "Translate requirements into scalable technical architecture." },
-  { n: "03", title: "Build", body: "Develop reliable software and infrastructure." },
-  { n: "04", title: "Integrate", body: "Connect systems, APIs, networks and workflows." },
-  { n: "05", title: "Optimize", body: "Measure performance and improve continuously." },
-];
-
-export const systemFlow = [
-  "Idea",
-  "Architecture",
-  "Engineering",
-  "Infrastructure",
-  "Deployment",
-  "Growth",
-];
-
 export const navItems = [
   { id: "about", label: "About" },
   { id: "expertise", label: "Expertise" },
+  { id: "stack", label: "Toolkit" },
   { id: "services", label: "Services" },
   { id: "projects", label: "Projects" },
   { id: "contact", label: "Contact" },

@@ -3,9 +3,7 @@ import { Nav } from "@/components/site/Nav";
 import { Hero } from "@/components/site/Hero";
 import {
   About,
-  Differentiator,
   Expertise,
-  Philosophy,
   Services,
   Stack,
 } from "@/components/site/Sections";
@@ -15,7 +13,7 @@ import { profile } from "@/data/portfolio";
 
 const title = "Sammy M. Kasango — Digital Systems Engineer | Software, Networks & Growth";
 const description =
-  "Digital Systems Engineer in Nairobi building scalable software, secure network infrastructure and digital growth systems for startups, SMEs and enterprises.";
+  "Digital Systems Engineer in Nairobi building useful software, secure networks, and digital experiences with people and teams.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -58,8 +56,6 @@ function Index() {
         <Stack />
         <Services />
         <Projects />
-        <Differentiator />
-        <Philosophy />
         <Contact />
       </main>
       <Footer />

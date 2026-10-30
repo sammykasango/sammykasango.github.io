@@ -18,11 +18,11 @@ export function Contact() {
         <div className="mt-10 grid gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
           <Reveal>
             <h2 className="font-display text-3xl leading-tight font-bold sm:text-[2.75rem]">
-              Let's Build Digital Systems That Work.
+              Let's Make Your Next Idea Possible.
             </h2>
             <p className="mt-5 max-w-xl text-base leading-relaxed opacity-75">
-              Whether you need software engineered, infrastructure designed, or digital growth
-              systems built — I'd like to hear what you're working on.
+              Bring a challenge, an early idea, or a system ready to grow. I work collaboratively
+              to find a clear direction and build a practical way forward.
             </p>
             <p className="label-mono mt-8 flex items-center gap-2 text-amber">
               <MapPin className="size-4" /> {profile.location}
@@ -81,7 +81,7 @@ export function Footer() {
           </p>
         </div>
         <ul className="flex flex-wrap gap-x-8 gap-y-3">
-          {["about", "expertise", "services", "projects", "contact"].map((id) => (
+          {["about", "expertise", "stack", "services", "projects", "contact"].map((id) => (
             <li key={id}>
               <a
                 href={`#${id}`}
